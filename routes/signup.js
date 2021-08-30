@@ -5,10 +5,10 @@ const router = express()
 const models = require('../models')
 
 router.get('/', (req, res) => {
-    res.render('register')
+    res.render('signup')
 })
 
-router.post('/sign-up', (req, res) => {
+router.post('/signup', (req, res) => {
     const username = req.body.username
     const password = req.body.password
     const email = req.body.email
