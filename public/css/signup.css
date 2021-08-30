@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-
 }
 
 html,
@@ -18,10 +17,12 @@ body {
     background-attachment: fixed;
 }
 
+
 /* .container span {
     color: #FFFFFF;
     font
 } */
+
 .nuddgeLogo {
     position: absolute;
     width: 10em;
@@ -30,7 +31,6 @@ body {
     top: 11%;
     background: url(../photos/logo_nuddge.png);
     background-repeat: no-repeat;
-
 }
 
 .nuddgeSlogan {

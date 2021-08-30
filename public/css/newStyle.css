@@ -27,16 +27,17 @@ main h2 {
 
 .glass {
     /* background: white; */
-    min-height: 33vh;
+    min-height: 30vh;
     min-width: 24%;
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 3rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* background: linear-gradient(to left top, rgba(0, 0, 0, 0.5), rgba(147, 60, 60, 0.5)); */
 }
 
 .nuddgeLogo {
@@ -65,15 +66,22 @@ main h2 {
 
 .loginButtons {
     display: flex;
+    margin-top: 1rem;
 
 }
 
 .loginButton {
     background: gray;
-    height: 1rem;
-    width: 1rem;
+    height: 1.5rem;
+    width: 4rem;
+    border-radius: 5px;
 }
 
 .signUpButton {
-    background: gray
+    background: gray;
+    \.loginButton\ \{\ background: gray;
+    height: 1.5rem;
+    width: 4rem;
+    border-radius: 5px;
+    margin-left: 1rem;
 }

@@ -19,9 +19,16 @@ app.set('view engine', 'mustache')
 
 app.use(express.urlencoded())
 
-app.get('/', (req,res) => {
+const signUpRouter = require('./routes/signup')
+
+app.get('/', (req, res) => {
     res.render("newLogin")
 })
+signUpRouter.get('/signup', (req, res) => {
+    res.render('signup')
+})
+
+app.use('/signup', signUpRouter)
 
 app.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
