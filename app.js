@@ -20,7 +20,7 @@ app.set('view engine', 'mustache')
 app.use(express.urlencoded())
 
 app.get('/', (req,res) => {
-    res.render("login")
+    res.render("newLogin")
 })
 
 app.listen(port, hostname, () => {
