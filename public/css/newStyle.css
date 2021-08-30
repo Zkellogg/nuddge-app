@@ -37,6 +37,7 @@ main h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* background: linear-gradient(to left top, rgba(0, 0, 0, 0.5), rgba(147, 60, 60, 0.5)); */
 }
 
 .nuddgeLogo {
