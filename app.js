@@ -19,9 +19,25 @@ app.set('view engine', 'mustache')
 
 app.use(express.urlencoded())
 
-app.get('/', (req,res) => {
+app.get('/', (req, res) => {
     res.render("newLogin")
 })
+app.use('/sign-up', signupRouter)
+    // app.post('/sign-up', (req, res) => {
+    //     const email = req.body.email
+    //     const username = req.body.username
+    //     const password = req.body.password
+    //     const user = models.Post.build({
+    //         email: email,
+    //         username: username,
+    //         password: password
+    //     })
+    //     user.save()
+    //         .then(newUser => {
+    //             res.redirect('/')
+    //         })
+
+// })
 
 app.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
