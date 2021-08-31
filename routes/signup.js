@@ -8,36 +8,51 @@ router.get('/', (req, res) => {
     res.render('signup')
 })
 
-router.post('/signup', (req, res) => {
+router.post('/', (req, res) => {
     const username = req.body.username
     const password = req.body.password
     const email = req.body.email
 
-    bcrypt.genSalt(10, function(error, salt) {
-        if (!error) {
-            bcrypt.hash(password, salt, function(error, hash) {
-                if (!error) {
-
-                    const user = models.User.build({
-                        username: username,
-                        password: hash,
-                        email: email
-                    })
-
-                    user.save()
-                        .then(savedUser => {
-                            console.log("User added")
-                            res.redirect('/')
-                        })
-
-                } else {
-                    res.send('Error')
-                }
-            })
-        } else {
-            res.send("Error")
-        }
+    const user = models.User.build({
+        username: username,
+        password: password,
+        email: email
     })
+
+    user.save()
+        .then(savedUser => {
+
+            console.log(savedUser)
+            res.redirect('/dashboard')
+        })
+
+
+
+    // bcrypt.genSalt(10, function(error, salt) {
+    //     if (!error) {
+    //         bcrypt.hash(password, salt, function(error, hash) {
+    //             if (!error) {
+
+    //                 const user = models.User.build({
+    //                     username: username,
+    //                     password: hash,
+    //                     email: email
+    //                 })
+
+    //                 user.save()
+    //                     .then(savedUser => {
+    //                         console.log("User added")
+    //                         res.redirect('/')
+    //                     })
+
+    //             } else {
+    //                 res.send('Error')
+    //             }
+    //         })
+    //     } else {
+    //         res.send("Error")
+    //     }
+    // })
 })
 
 module.exports = router
