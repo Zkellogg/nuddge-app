@@ -27,8 +27,8 @@ main h2 {
 
 .glass {
     /* background: white; */
-    min-height: 30vh;
-    min-width: 24%;
+    min-height: 60vh;
+    min-width: 56%;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 3rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -49,39 +49,42 @@ main h2 {
 
 #username {
     border-radius: 2rem;
-    min-width: 18rem;
-    min-height: 2rem;
+    min-width: 25rem;
+    min-height: 4rem;
     text-align: center;
+    font-size: 29px;
     margin: 2rem;
 }
 
 #password {
-
     border-radius: 2rem;
-    min-width: 18rem;
-    min-height: 2rem;
+    min-width: 25rem;
+    min-height: 4rem;
     text-align: center;
-
+    font-size: 29px;
+    margin: 2rem;
 }
 
 .loginButtons {
     display: flex;
     margin-top: 1rem;
-
+    margin-left: 376px;
 }
 
 .loginButton {
-    background: gray;
-    height: 1.5rem;
-    width: 4rem;
+    background: dodgerblue;
+    height: 2.5rem;
+    width: 12rem;
     border-radius: 5px;
 }
 
 .signUpButton {
-    background: gray;
-    \.loginButton\ \{\ background: gray;
-    height: 1.5rem;
-    width: 4rem;
+    display: flex;
+    margin-top: 2rem;
+    margin-right: -13px;
+    background: dodgerblue;
+    height: 2.5rem;
+    width: 12rem;
     border-radius: 5px;
-    margin-left: 1rem;
+    text-align: center;
 }
