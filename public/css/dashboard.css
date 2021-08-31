@@ -16,7 +16,7 @@ main {
 
 }
 
-.dashboardHead {
+/* .dashboardHead {
     width: 100%;
     height: 18vh;
     background: rgb(86, 86, 153);
@@ -25,7 +25,104 @@ main {
     display: flex;
 }
 
-.dashboardHead image {
-    height: 3vh;
-    width: 3vh;
+.dashboardLogo {
+    background: url('../photos/logo_nuddge.png');
+    height: 18vh;
+    width: 18vh;
+    background-repeat: no-repeat;
+} */
+/* Main BS Navbar CSS overide. */
+
+.dashboardLogo {
+
+    width: 7em;
+    height: 4em;
+    position: absolute;
+    top: 1em;
+    left: 0;
+
+}
+
+.navbar-expand-lg {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 100%;
+    height: 10vh;
+    position: absolute;
+    top: 0;
+    box-shadow: 0 0 5px 2px #1c3953;
+}
+
+.nav-bg {
+    background: #687dd2;
+}
+
+.nuddgeCounter {
+    height: 7vh;
+    width: 11vh;
+    background: linear-gradient(to left top, rgb(65, 128, 176), rgb(187, 187, 187));
+    position: absolute;
+    right: 7vh;
+    border-radius: 3px;
+    box-shadow: 0 0 5px 2px #354757;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nuddgeCounter label {
+    font-size: 1vh;
+    text-align: center;
+}
+
+.nuddgeDisplay {
+    background: linear-gradient(to left top, rgb(39, 81, 113), rgb(187, 187, 187));
+    height: 100vh;
+    width: 97vw;
+    margin-top: 13vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1em;
+    box-shadow: 0 0 3px 3px #505c66;
+}
+
+.nuddge {
+    background: tomato;
+    height: 8em;
+    width: 85vw;
+    margin-top: 3em;
+    border-radius: 1em;
+    box-shadow: 0 0 7px 3px #b74747;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nuddge>.nuddgeCategory {
+    flex: 1 1 7em
+}
+
+.nuddge>.nuddgeBody {
+    flex: 1 1 23em;
+}
+
+.nuddge>.nuddgeButtons {
+    flex: 1 1 11em;
+
+}
+
+.nuddgeCategory {
+    background: rgba(158, 93, 93, 0.2);
+    padding: 1em;
+}
+
+.nuddgeBody {
+    background: rgb(46, 43, 43);
+    padding: 1em;
+}
+
+.nuddgeButtons {
+    background: white;
+    padding: 1em;
 }
