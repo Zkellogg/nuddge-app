@@ -17,12 +17,15 @@
         <h2 for="slogan" class="nuddgeSlogan">Nuddge yourself to be a better you.
     </h2>
         <section class="glass">
+            <form method="POST" action="/login">
             <input type="text" name="username" class="loginInput" id="username" placeholder="Username">
                 <input type="password" name="password" class="loginInput" id="password" placeholder="password">
                 <div class="loginButtons">
                 <button class="loginButton">Log In</button>
                 <a href='http://127.0.0.1:3000/signup'><button class="signUpButton">Sign Up</button></a>
                 </div>
+                {{errorMessage}}
+            </form>
         </section>
     </main>
 
