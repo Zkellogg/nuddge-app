@@ -36,14 +36,15 @@ const signUpRouter = require('./routes/signup')
 const dashboardRouter = require('./routes/dashboard')
 
 app.get('/', (req, res) => {
-    res.render("newLogin")
-})
-// signUpRouter.get('/signup', (req, res) => {
-//     res.render('signup')
-// })
+        res.render("newLogin")
+    })
+    // signUpRouter.get('/signup', (req, res) => {
+    //     res.render('signup')
+    // })
 
 app.use('/signup', signUpRouter)
 app.use('/dashboard', dashboardRouter)
+
 
 
 
@@ -76,14 +77,18 @@ app.post('/login', (req, res) => {
     const username = req.body.username
     const password = req.body.password
 
-    models.User.findOne({where: {username: username}})
+    models.User.findOne({ where: { username: username } })
+    models.User.findOne({ where: { password: password } })
+
     .then((user) => {
+
         if (user.password = password) {
-            res.redirect('/dashboard')
-        }else {
+            console.log(`${username} is logged in`)
+            res.redirect('/dashboard', )
+        } else {
             console.log("error")
         }
-        
+
         // bcrypt.compare(password, user.password, function (error, result) {
         //     if (result) {
         //         // if(req.session) {
@@ -93,21 +98,21 @@ app.post('/login', (req, res) => {
         //     }else {
         //         res.render('newLogin', {errorMessage: 'Password is incorrect'})
         //     }
+        //     // })
+        // }).catch((error) => {
+        //     res.render('newLogin')
         // })
-    }).catch((error) => {
-        res.render('newLogin', {errorMessage: 'User not found'})
+
     })
-        
 })
 
-    
 
 app.get('/add-nuddge', (req, res) => {
     models.Nuddge.findAll({})
-    .then(nuddges => {
-        console.log(nuddges)
-        res.render('add-nuddge', {nuddges: nuddges})
-    })
+        .then(nuddges => {
+            console.log(nuddges)
+            res.render('add-nuddge', { nuddges: nuddges })
+        })
 })
 
 app.post('/add-nuddge', (req, res) => {
