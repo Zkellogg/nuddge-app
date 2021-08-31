@@ -2,14 +2,14 @@ const express = require('express');
 const { render } = require('mustache');
 
 const app = express()
-var session = require('express-session')
+
+const session = require('express-session')
 
 const hostname = '127.0.0.1';
 
 const port = 3000;
 
 const mustacheExpress = require('mustache-express');
-const { REPL_MODE_SLOPPY } = require('repl');
 
 var bcrypt = require('bcryptjs')
 

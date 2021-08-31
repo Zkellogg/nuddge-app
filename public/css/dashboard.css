@@ -6,14 +6,13 @@
 
 main {
     min-height: 100vh;
-    background: linear-gradient(to left top, rgb(39, 81, 113), rgb(187, 187, 187));
+    background: #e1d8d0;
     background-position: center;
     background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 
 /* .dashboardHead {
@@ -54,13 +53,13 @@ main {
 }
 
 .nav-bg {
-    background: #687dd2;
+    background: #e8e8e2;
 }
 
 .nuddgeCounter {
     height: 7vh;
     width: 11vh;
-    background: linear-gradient(to left top, rgb(65, 128, 176), rgb(187, 187, 187));
+    background: linear-gradient(to left top, rgb(65, 128, 176), rgb(72, 208, 132));
     position: absolute;
     right: 7vh;
     border-radius: 3px;
@@ -77,19 +76,19 @@ main {
 }
 
 .nuddgeDisplay {
-    background: linear-gradient(to left top, rgb(39, 81, 113), rgb(187, 187, 187));
+    background: linear-gradient(to left top, rgb(32, 176, 91), rgb(115, 174, 189));
     height: 100vh;
-    width: 97vw;
+    width: 92vw;
     margin-top: 13vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 1em;
-    box-shadow: 0 0 3px 3px #505c66;
+    box-shadow: 0 0 3px 3px #8896a2;
 }
 
 .nuddge {
-    background: tomato;
+    background: rgba(183, 177, 159, 0.33);
     height: 8em;
     width: 85vw;
     margin-top: 3em;
@@ -113,16 +112,16 @@ main {
 }
 
 .nuddgeCategory {
-    background: rgba(158, 93, 93, 0.2);
+    background: rgba(158, 93, 93, 0);
     padding: 1em;
 }
 
 .nuddgeBody {
-    background: rgb(46, 43, 43);
+    background: rgba(46, 43, 43, 0.2);
     padding: 1em;
 }
 
 .nuddgeButtons {
-    background: white;
+    background: rgba(5, 5, 5, 0.2);
     padding: 1em;
 }
