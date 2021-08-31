@@ -4,6 +4,8 @@ const router = express()
 
 const models = require('../models')
 
-router.get('/dashboard', (req, res) => {
+router.get('/', (req, res) => {
     res.render('dashboard')
 })
+
+module.exports = router

@@ -21,12 +21,15 @@ app.use(express.urlencoded())
 
 const signUpRouter = require('./routes/signup')
 
+const dashboardRouter = require('./routes/dashboard')
+
 app.get('/', (req, res) => {
     res.render("newLogin")
 })
 signUpRouter.get('/signup', (req, res) => {
     res.render('signup')
 })
+app.use('/dashboard', dashboardRouter)
 
 app.use('/signup', signUpRouter)
 
