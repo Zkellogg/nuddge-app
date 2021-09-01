@@ -19,7 +19,8 @@ module.exports = (sequelize, DataTypes) => {
     points: DataTypes.INTEGER,
     boostDate: DataTypes.STRING,
     user_id: DataTypes.INTEGER,
-    category: DataTypes.STRING
+    category: DataTypes.STRING,
+    status: DataTypes.BOOLEAN
   }, {
     sequelize,
     modelName: 'Nuddge',
