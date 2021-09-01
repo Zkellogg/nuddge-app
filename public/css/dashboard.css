@@ -64,30 +64,6 @@ main {
     box-shadow: 0 0 3px 3px #8896a2;
 }
 
-.nuddge {
-    background: transparent;
-    height: 8em;
-    width: 85vw;
-    margin-top: 5em;
-    border-radius: 1em;
-    box-shadow: 0 0 7px 3px #b74747;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0px;
-}
-
-.nuddge>.nuddgeCategory {
-    flex: 1 1 7em
-}
-
-.nuddge>.nuddgeBody {
-    flex: 1 1 23em;
-}
-
-.nuddge>.nuddgeButtons {
-    flex: 1 1 11em;
-
-}
 
 .nuddgeCategory {
     background: rgba(158, 93, 93, 0);
@@ -97,10 +73,6 @@ main {
 
 .nuddgeCategory h1 {
     font-size: 1.5rem;
-}
-
-.nuddgeCategory h3 {
-    font-size: 1.3rem;
 }
 
 
@@ -114,9 +86,7 @@ main {
     font-size: 2rem;
 }
 
-.nuddgeTitle h3 {
-    font-size: 1.3rem;
-}
+
 
 .nuddgeBody {
     background: rgba(158, 93, 93, 0);
@@ -161,7 +131,7 @@ main {
 
 .nuddgeInput {
     background: #9ac8b1;
-    height: 4em;
+    height: 6em;
     width: 100%;
     display: flex;
     justify-content: center;

@@ -45,11 +45,7 @@ app.get('/', (req, res) => {
 
 app.use('/signup', signUpRouter)
 app.use('/dashboard', dashboardRouter)
-<<<<<<< HEAD
 app.use('/login', loginRouter)
-=======
-app.use('/add-nuddge', addNuddgeRouter)
->>>>>>> main
 
 
 
