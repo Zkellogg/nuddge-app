@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="nuddgeDisplay">
     <section class="nuddge">
         <div class="nuddgeCategory"></div>
@@ -5,3 +6,53 @@
         <div class="nuddgeButtons"></div>
     </section>
 </div>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="/add-nuddge">
+        <select name="category" id="">
+            <option value="" selected disabled hidden>Category</option>
+            <option value="career">Career</option>
+            <option value="education">Education</option>
+            <option value="fitness">Fitness</option>
+            <option value="hobbies">Hobbies</option>
+            <option value="mentalHealth">Mental Health</option>
+            <option value="social">Social</option>
+        </select>
+        <input type="text" name="title" placholder="Enter Nuddge name" id="">
+        <input type="text" name="body" placeholder="Enter Nuddge description" id="">
+        <input type="date" name="boostDate" id="">
+        <select name="points" id="">
+            <option value="" selected disabled hidden>Points</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+        </select> 
+        <!--<input type="hidden" value="{{userId}}" name="userId">-->
+        <button>Submit</button>
+    </form>
+    
+</body>
+</html>
+
+
+
+<ul>
+    {{#nuddges}}
+    <li>
+        {{title}}-{{body}}
+    </li>
+    {{/nuddges}}
+</ul>  
+
+
+
+
+>>>>>>> 0d5db30a79560c1a5fee26338f482af8861dbccc

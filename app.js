@@ -35,6 +35,8 @@ const signUpRouter = require('./routes/signup')
 
 const dashboardRouter = require('./routes/dashboard')
 
+const addNuddgeRouter = require('./routes/add-nuddge')
+
 app.get('/', (req, res) => {
         res.render("newLogin")
     })
@@ -44,6 +46,7 @@ app.get('/', (req, res) => {
 
 app.use('/signup', signUpRouter)
 app.use('/dashboard', dashboardRouter)
+app.use('/add-nuddge', addNuddgeRouter)
 
 
 
@@ -107,32 +110,7 @@ app.post('/login', (req, res) => {
 })
 
 
-app.get('/add-nuddge', (req, res) => {
-    models.Nuddge.findAll({})
-        .then(nuddges => {
-            console.log(nuddges)
-            res.render('add-nuddge', { nuddges: nuddges })
-        })
-})
 
-app.post('/add-nuddge', (req, res) => {
-    const title = req.body.title
-    const body = req.body.body
-    const points = parseInt(req.body.points)
-    const boostDate = req.body.boostDate
-    const category = req.body.category
-
-    const nuddge = models.Nuddge.build({
-        title: title,
-        body: body,
-        points: points,
-        boostDate: boostDate,
-        category: category
-    })
-    nuddge.save().then((savedNuddge) => {
-        res.redirect('/add-nuddge')
-    })
-})
 
 
 app.listen(port, hostname, () => {
