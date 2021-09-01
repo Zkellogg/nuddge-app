@@ -43,13 +43,7 @@ main {
 }
 
 .navbar-expand-lg {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
     width: 100%;
-    height: 10vh;
-    position: absolute;
-    top: 0;
-    box-shadow: 0 0 5px 2px #1c3953;
 }
 
 .nav-bg {
@@ -124,4 +118,28 @@ main {
 .nuddgeButtons {
     background: rgba(5, 5, 5, 0.2);
     padding: 1em;
+}
+
+#nuddgeBoard {
+    color: #5ca433;
+}
+
+#addNuddge {
+    color: #5ca433
+}
+
+#profileDropdown {
+    color: #5ca433;
+}
+
+@media screen and (max-width: 992px) {
+    .dashboardLogo {
+        display: none
+    }
+}
+
+.nuddgeInput {
+    background: #9ac8b1;
+    height: 4em;
+    width: 100%;
 }
