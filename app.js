@@ -11,7 +11,7 @@ const port = 3000;
 
 const mustacheExpress = require('mustache-express');
 
-var bcrypt = require('bcryptjs')
+global.bcrypt = require('bcryptjs')
 
 global.models = require('./models')
 
@@ -31,46 +31,22 @@ app.set('view engine', 'mustache')
 
 app.use(express.urlencoded())
 
+const loginRouter = express('./routes/login')
+
 const signUpRouter = require('./routes/signup')
 
 const dashboardRouter = require('./routes/dashboard')
 
 app.get('/', (req, res) => {
-        res.render("newLogin")
-    })
-    // signUpRouter.get('/signup', (req, res) => {
-    //     res.render('signup')
-    // })
+    res.render("login")
+})
 
 app.use('/signup', signUpRouter)
 app.use('/dashboard', dashboardRouter)
+app.use('/login', loginRouter)
 
 
 
-
-// router.post('/log-in', (req, res) => {
-//     const username = req.body.username
-//     const password = req.body.password
-
-//     models.User.findOne({where: {username: username}})
-//     .then((user) => {
-//         // compare the password
-//         bcrypt.compare(password, user.password, function(error, result) {
-//             if(result){
-//                 // user has been authenticated
-//                 if(req.session) {
-//                     req.session.userId = user.id
-//                 }
-//                 res.redirect('/travelBlog')
-//             } else {
-//                 // user is not authenticated
-//                 res.render('login', {errorMessage: 'Password is wrong'})
-//             }
-//         })
-//     }).catch((error) => {
-//         res.render('login', {errorMessage: "User not found"})
-//     })
-// })
 
 
 app.post('/login', (req, res) => {
@@ -78,32 +54,23 @@ app.post('/login', (req, res) => {
     const password = req.body.password
 
     models.User.findOne({ where: { username: username } })
-    models.User.findOne({ where: { password: password } })
+        // models.User.findOne({ where: { password: password } })
 
     .then((user) => {
-
-        if (user.password = password) {
-            console.log(`${username} is logged in`)
-            res.redirect('/dashboard', )
-        } else {
-            console.log("error")
-        }
-
-        // bcrypt.compare(password, user.password, function (error, result) {
-        //     if (result) {
-        //         // if(req.session) {
-        //         //     req.session.userId = user.id
-        //         // }
-        //         res.redirect('/dashboard')
-        //     }else {
-        //         res.render('newLogin', {errorMessage: 'Password is incorrect'})
-        //     }
-        //     // })
-        // }).catch((error) => {
-        //     res.render('newLogin')
-        // })
-
-    })
+            bcrypt.compare(password, user.password, function(err, result) {
+                if (result) {
+                    if (req.session) {
+                        req.session.userId = user.id
+                        res.render('dashboard')
+                    }
+                } else {
+                    res.render('login', { errorMessage: 'INVALID DETAILS' })
+                }
+            })
+        })
+        .catch((error) => {
+            res.render('dashboard', { errorMessage: "User not found" })
+        })
 })
 
 

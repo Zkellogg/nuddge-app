@@ -12,47 +12,29 @@ router.post('/', (req, res) => {
     const username = req.body.username
     const password = req.body.password
     const email = req.body.email
-
-    const user = models.User.build({
-        username: username,
-        password: password,
-        email: email
+    bcrypt.genSalt(10, function(err, salt) {
+        if (!err) {
+            bcrypt.hash(password, salt, function(err, hash) {
+                const user = models.User.build({
+                    username: username,
+                    password: hash,
+                    email: email
+                })
+                user.save()
+                    .then(newUser => {
+                        console.log('user added successfully')
+                        res.redirect('/')
+                    })
+            })
+        }
     })
-
-    user.save()
-        .then(savedUser => {
-
-            console.log(savedUser)
-            res.redirect('/dashboard')
-        })
-
-
-
-    // bcrypt.genSalt(10, function(error, salt) {
-    //     if (!error) {
-    //         bcrypt.hash(password, salt, function(error, hash) {
-    //             if (!error) {
-
-    //                 const user = models.User.build({
-    //                     username: username,
-    //                     password: hash,
-    //                     email: email
-    //                 })
-
-    //                 user.save()
-    //                     .then(savedUser => {
-    //                         console.log("User added")
-    //                         res.redirect('/')
-    //                     })
-
-    //             } else {
-    //                 res.send('Error')
-    //             }
-    //         })
-    //     } else {
-    //         res.send("Error")
-    //     }
-    // })
 })
+
+
+
+
+
+
+
 
 module.exports = router
