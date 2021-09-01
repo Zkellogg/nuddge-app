@@ -26,18 +26,16 @@ main h2 {
 }
 
 .glass {
-    /* background: white; */
-    min-height: 60vh;
-    min-width: 56%;
+    min-height: 45vh;
+    min-width: 45%;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 3rem;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     margin: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background: linear-gradient(to left top, rgba(0, 0, 0, 0.5), rgba(147, 60, 60, 0.5)); */
 }
 
 .nuddgeLogo {
@@ -49,26 +47,31 @@ main h2 {
 
 #username {
     border-radius: 2rem;
-    min-width: 25rem;
+    min-width: 31rem;
     min-height: 4rem;
     text-align: center;
     font-size: 29px;
     margin: 2rem;
+    flex-direction: column;
+    display: flex;
 }
 
 #password {
     border-radius: 2rem;
-    min-width: 25rem;
+    min-width: 31rem;
     min-height: 4rem;
     text-align: center;
     font-size: 29px;
     margin: 2rem;
+    flex-direction: column;
+    display: flex;
 }
 
 .loginButtons {
     display: flex;
-    margin-top: 1rem;
-    margin-left: 376px;
+    margin-top: 2rem;
+    margin-left: 224px;
+    padding: 17px;
 }
 
 .loginButton {
@@ -81,10 +84,11 @@ main h2 {
 .signUpButton {
     display: flex;
     margin-top: 2rem;
-    margin-right: -13px;
+    margin-left: 224px;
+    padding: 17px;
     background: dodgerblue;
     height: 2.5rem;
-    width: 12rem;
+    width: 15rem;
     border-radius: 5px;
     text-align: center;
 }
