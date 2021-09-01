@@ -92,3 +92,13 @@ main h2 {
     border-radius: 5px;
     text-align: center;
 }
+
+h1 {
+    margin-left: 233px;
+    color: white;
+}
+
+#loginButtonCss {
+    width: 105px;
+    margin-right: 224px;
+}
