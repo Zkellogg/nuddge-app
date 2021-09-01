@@ -64,7 +64,7 @@ app.post('/login', (req, res) => {
                 if (result) {
                     if (req.session) {
                         req.session.userId = user.id
-                        res.render('dashboard')
+                        res.redirect('/dashboard')
                     }
                 } else {
                     res.render('login', { errorMessage: 'INVALID DETAILS' })
