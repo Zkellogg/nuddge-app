@@ -44,7 +44,12 @@
     </div>
   </div>
   <div class="nuddgeCounter">
-      <Label>Nuddge-Score:</Label>
+      <Label>Points</Label>
+      <div>
+          {{#user}}
+          <h1>{{total_points}}</h1>
+          {{/user}}
+      </div>
   </div>
 </nav>
 <div class="nuddgeDisplay">
@@ -57,7 +62,12 @@
         <div class="points">{{points}}</div>
            
 
-        <div class="nuddgeButtons"></div>
+        <div class="nuddgeButtons">
+            <form action='/add-nuddge/update-status/{{id}}' method="POST">
+                <input type="hidden" name={{id}} id="">
+                <button>Completed</button>
+            </form>
+        </div>
     </section>
     {{/nuddges}}
 </div>
