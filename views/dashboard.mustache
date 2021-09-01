@@ -7,6 +7,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
 
     <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet"> 
     <title>Document</title>
 </head>
 <body>
@@ -47,21 +50,75 @@
       <Label>Nuddge-Score:</Label>
   </div>
 </nav>
-<div class="nuddgeInput"></div>
+<div class="nuddgeInput">
+    <form class="nuddgeForm" method="POST" action="/add-nuddge">
+        <select name="category" id="">
+            <option value="" selected disabled hidden>Category</option>
+            <option value="career">Career</option>
+            <option value="education">Education</option>
+            <option value="fitness">Fitness</option>
+            <option value="hobbies">Hobbies</option>
+            <option value="mentalHealth">Mental Health</option>
+            <option value="social">Social</option>
+        </select>
+        <input class="nuddgeInputBox" type="text" name="title" placholder="Enter Nuddge name" id="">
+        <input class="nuddgeInputBox"type="text" name="body" placeholder="Enter Nuddge description" id="">
+        <input class="nuddgeInputBox"type="date" name="boostDate" id="">
+        <select name="points" id="">
+            <option value="" selected disabled hidden>Points</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+        </select> 
+        <!--<input type="hidden" value="{{userId}}" name="userId">-->
+        <button class="nuddgeInputButton" >Submit</button>
+    </form>
+</div>
 
 <div class="nuddgeDisplay">
+    {{#nuddges}}
+    <div class="jumbotron nuddgeJumbo">
+    <div class="container nuddgeContainer">
+        <div class="nuddgeTitle">
+            <!-- <h1>Nuddge Title</h1> -->
+            <h1>{{title}}</h1>
+        </div>
+        <div class="nuddgeCategory">
+            <h1>Category: {{category}}</h1>
+        </div>
+        <div class="nuddgeBody">
+            <label for="">Description:</label>
+            <p>{{body}}</p>
+        </div>
+        <div class="boostDate">
+            <label for="">Boost Date:</label>
+            <p class="lead">{{boostDate}}</p>
+        </div>
+        <div class="points">
+            <label for="">Nuddge Points:</label>
+            <p class="lead">{{points}}</p>
+        </div>
+        <div class="nuddgeButtons">
+            <Button class="btn btn-primary">Complete!</Button>
+        </div>
+    </div>
+</div>
+{{/nuddges}}
+</div>
+   <!-- {{#nuddges}}
     <section class="nuddge">
-        <div class="nuddgeCategory"></div>
-        <div class="nuddgeBody"></div>
+        <div class="nuddgeCategory">{{category}}</div>
+        <div class="nuddgeTitle">{{title}}</div>
+        <div class="nuddgeBody">{{body}}</div>
+        <div class="boostDate">{{boostDate}}</div>
+        <div class="points">{{points}}</div>
+           
+
         <div class="nuddgeButtons"></div>
     </section>
-</div>
+    {{/nuddges}} -->
+
 </main>
-
-
-
-
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 
 </body>
