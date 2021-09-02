@@ -133,4 +133,15 @@ h1 {
         align-items: center;
         margin-right: 56px;
     }
+    #username {
+        border-radius: 2rem;
+        width: 21rem;
+        min-height: 4rem;
+        text-align: center;
+        font-size: 27px;
+        margin: 8rem;
+        flex-direction: column;
+        display: flex;
+        margin-bottom: 11px;
+    }
 }
