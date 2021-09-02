@@ -5,9 +5,9 @@ const app = express()
 
 const session = require('express-session')
 
-const hostname = '127.0.0.1';
 
-const port = 3000;
+
+const PORT = process.env.PORT || 8080;
 
 const mustacheExpress = require('mustache-express');
 
@@ -80,6 +80,6 @@ app.post('/login', (req, res) => {
 
 
 
-app.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
+app.listen(PORT, () => {
+    console.log(`Server running at http://${port}/`);
 })
