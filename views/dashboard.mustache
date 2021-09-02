@@ -17,7 +17,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark nav-bg static-top">
   <div class="container" style="margin-right: 10rem ;">
     <a class="navbar-brand" href="#">
-      <img src="photos/logo_nuddge.png" alt="..." height="36" class="dashboardLogo">
+      <img src="photos/final-logo.png" alt="..." height="36" class="dashboardLogo">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -47,7 +47,11 @@
     </div>
   </div>
   <div class="nuddgeCounter">
+    {{#nuddges}}
       <Label>Nuddge-Score:</Label>
+      <h1>{{user.total_points}}</h1>
+      {{break}}
+      {{/nuddges}}
   </div>
 </nav>
 <div class="nuddgeInput">

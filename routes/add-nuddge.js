@@ -42,7 +42,7 @@ router.post('/', (req, res) => {
     const points = parseInt(req.body.points)
     const boostDate = req.body.boostDate
     const category = req.body.category
-    // const userId = req.body.userId
+    const userId = req.session.userId
 
     const nuddge = models.Nuddge.build({
         title: title,
@@ -50,7 +50,7 @@ router.post('/', (req, res) => {
         points: points,
         boostDate: boostDate,
         category: category,
-        // user_id: userId
+        user_id: userId
     })
     nuddge.save().then(() => {
         res.redirect('/dashboard')

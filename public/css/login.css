@@ -39,10 +39,11 @@ main h2 {
 }
 
 .nuddgeLogo {
-    background: url(../photos/logo_nuddge.png);
+    background: url(../photos/final-logo.png);
     background-repeat: no-repeat;
-    width: 20vh;
+    width: 34vh;
     height: 20vh;
+    background-size: cover;
 }
 
 #username {
