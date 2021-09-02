@@ -22,7 +22,11 @@ module.exports = (sequelize, DataTypes) => {
     boostDate: DataTypes.STRING,
     user_id: DataTypes.INTEGER,
     category: DataTypes.STRING,
-    status: DataTypes.BOOLEAN,
+    status: {
+     type: DataTypes.BOOLEAN,
+     allowNull: false,
+     defaultValue: false
+    } ,
     total_points: DataTypes.INTEGER
   }, {
     sequelize,

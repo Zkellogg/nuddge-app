@@ -85,5 +85,5 @@ app.post('/login', (req, res) => {
 
 
 app.listen(PORT, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
+    console.log(`Server running at http://${hostname}:${PORT}/`);
 })
