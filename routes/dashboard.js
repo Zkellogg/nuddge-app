@@ -12,7 +12,7 @@ const user = require('../models/user')
 router.get('/', (req, res) => {
     if(req.session) {
     models.Nuddge.findAll({
-        where: {user_id: req.session.userId},
+        where: {user_id: req.session.userId, status: false},
         include: [
             {
                 model: models.User, 
@@ -21,8 +21,8 @@ router.get('/', (req, res) => {
         ]
     })
     .then(nuddges => {
-        console.log(nuddges[0].user)
-        res.render('dashboard', {nuddges: nuddges,})
+        // console.log(nuddges[0].user)
+        res.render('dashboard', {nuddges: nuddges, points: req.session.points})
     })
 }
 })
