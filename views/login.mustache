@@ -25,20 +25,21 @@
                 <input type="password" name="password" class="loginInput" id="password" placeholder="password">
                 <div class="loginButtons">
                     <button id="loginButtonCss" type="loginButton" class="btn btn-primary btn-lg">Log In</button>
-                    <a href='http://127.0.0.1:3000/signup'><button type="button" class="btn btn-primary btn-lg">Sign
-                            Up</button></a>
-                    <form method="POST" action="/login">
-                        <input type="hidden" name="username" value="johndoe">
-                        <input type="hidden" name="password" value="password" id="">
-                        <button class="btn btn-primary btn-lg">Log in as Guest</button>
-                    </form>
                 </div>
-                    <p id="errorMessage">{{errorMessage}}</p>
+
+
+                <p id="errorMessage">{{errorMessage}}</p>
+            </form>
+            <a href='http://127.0.0.1:3000/signup'><button type="button" class="btn btn-primary btn-lg">Sign
+                    Up</button></a>
+            <form method="POST" action="/login">
+                <input type="hidden" name="username" value="guest">
+                <input type="hidden" name="password" value="password" id="">
+                <button class="btn btn-primary btn-lg">Guest Login</button>
             </form>
 
 
 
-            
         </section>
     </main>
 
