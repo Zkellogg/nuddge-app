@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/login.css">
     <title>Document</title>
 </head>
+
 <body>
     <main>
-    <div class="nuddgeLogo">
-    </div>
+        <div class="nuddgeLogo">
+        </div>
         <h2 for="slogan" class="nuddgeSlogan">Nuddge yourself to be a better you.
-    </h2>
+        </h2>
         <section class="glass">
             <form method="POST" action="/login">
-            <h1>Login</h1>
+                <h1>Login</h1>
                 <input type="text" name="username" class="loginInput" id="username" placeholder="Username">
                 <input type="password" name="password" class="loginInput" id="password" placeholder="password">
                 <div class="loginButtons">
-                <button id="loginButtonCss"type="loginButton" class="btn btn-primary btn-lg">Log In</button>
+                    <button id="loginButtonCss" type="loginButton" class="btn btn-primary btn-lg">Log In</button>
+                    <a href='http://127.0.0.1:3000/signup'><button type="button" class="btn btn-primary btn-lg">Sign
+                            Up</button></a>
+                    <form method="POST" action="/login">
+                        <input type="hidden" name="username" value="johndoe">
+                        <input type="hidden" name="password" value="password" id="">
+                        <button class="btn btn-primary btn-lg">Log in as Guest</button>
+                    </form>
                 </div>
-                {{errorMessage}}
+                    <p id="errorMessage">{{errorMessage}}</p>
             </form>
-          <a href='http://127.0.0.1:3000/signup'><button type="button" class="btn btn-primary btn-lg">Sign Up</button></a>
 
+
+
+            
         </section>
     </main>
 
 </body>
+
 </html>

@@ -72,7 +72,7 @@ app.post('/login', (req, res) => {
             })
         })
         .catch((error) => {
-            res.render('dashboard', { errorMessage: "User not found" })
+            res.render('login', { errorMessage: "User not found" })
         })
 })
 

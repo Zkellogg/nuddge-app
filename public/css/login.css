@@ -54,6 +54,7 @@ main h2 {
     margin: 2rem;
     flex-direction: column;
     display: flex;
+    
 }
 
 #password {
@@ -69,6 +70,7 @@ main h2 {
 
 .loginButtons {
     display: flex;
+    justify-content: center;
     margin-top: 2rem;
     margin-left: 224px;
     padding: 17px;
@@ -101,4 +103,8 @@ h1 {
 #loginButtonCss {
     width: 105px;
     margin-right: 224px;
+}
+
+#errorMessage {
+    color: white;
 }
