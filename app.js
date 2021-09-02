@@ -31,7 +31,7 @@ app.set('view engine', 'mustache')
 
 app.use(express.urlencoded())
 
-const loginRouter = express('./routes/login')
+const loginRouter = require('./routes/login')
 
 const signUpRouter = require('./routes/signup')
 
@@ -39,9 +39,9 @@ const dashboardRouter = require('./routes/dashboard')
 
 const addNuddgeRouter = require('./routes/add-nuddge')
 
-app.get('/', (req, res) => {
-    res.render("login")
-})
+// app.get('/', (req, res) => {
+//     res.render("login")
+// })
 
 app.use('/signup', signUpRouter)
 app.use('/dashboard', dashboardRouter)
@@ -52,29 +52,29 @@ app.use('/add-nuddge', addNuddgeRouter)
 
 
 
-app.post('/login', (req, res) => {
-    const username = req.body.username
-    const password = req.body.password
+// app.post('/login', (req, res) => {
+//     const username = req.body.username
+//     const password = req.body.password
 
-    models.User.findOne({ where: { username: username } })
-        // models.User.findOne({ where: { password: password } })
+//     models.User.findOne({ where: { username: username } })
+//         // models.User.findOne({ where: { password: password } })
 
-    .then((user) => {
-            bcrypt.compare(password, user.password, function(err, result) {
-                if (result) {
-                    if (req.session) {
-                        req.session.userId = user.id
-                        res.redirect('/dashboard')
-                    }
-                } else {
-                    res.render('login', { errorMessage: 'INVALID DETAILS' })
-                }
-            })
-        })
-        .catch((error) => {
-            res.render('login', { errorMessage: "User not found" })
-        })
-})
+//     .then((user) => {
+//             bcrypt.compare(password, user.password, function(err, result) {
+//                 if (result) {
+//                     if (req.session) {
+//                         req.session.userId = user.id
+//                         res.redirect('/dashboard')
+//                     }
+//                 } else {
+//                     res.render('login', { errorMessage: 'INVALID DETAILS' })
+//                 }
+//             })
+//         })
+//         .catch((error) => {
+//             res.render('login', { errorMessage: "User not found" })
+//         })
+// })
 
 
 

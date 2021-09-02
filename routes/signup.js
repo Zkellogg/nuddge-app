@@ -23,7 +23,7 @@ router.post('/', (req, res) => {
                 user.save()
                     .then(newUser => {
                         console.log('user added successfully')
-                        res.redirect('/')
+                        res.redirect('/login')
                     })
             })
         }
