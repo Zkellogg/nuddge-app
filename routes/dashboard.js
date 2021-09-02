@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
         ]
     })
     .then(nuddges => {
-        console.log(nuddges[0].user)
+        // console.log(nuddges[0].user)
         res.render('dashboard', {nuddges: nuddges,})
     })
 }
