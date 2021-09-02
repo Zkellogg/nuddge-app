@@ -10,11 +10,21 @@ const user = require('../models/user')
 // })
 
 router.get('/', (req, res) => {
-    models.Nuddge.findAll({})
-    .then(nuddges => {
-        console.log(nuddges)
-        res.render('dashboard', {nuddges: nuddges})
+    if(req.session) {
+    models.Nuddge.findAll({
+        where: {user_id: req.session.userId},
+        include: [
+            {
+                model: models.User, 
+                as: 'user'
+            }
+        ]
     })
+    .then(nuddges => {
+        console.log(nuddges[0].user)
+        res.render('dashboard', {nuddges: nuddges,})
+    })
+}
 })
 
 module.exports = router
