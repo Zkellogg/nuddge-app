@@ -39,6 +39,8 @@ const dashboardRouter = require('./routes/dashboard')
 
 const addNuddgeRouter = require('./routes/add-nuddge')
 
+const completeNuddgeRouter = require('./routes/complete-nuddge')
+
 app.get('/', (req, res) => {
     res.render("login")
 })
@@ -47,6 +49,7 @@ app.use('/signup', signUpRouter)
 app.use('/dashboard', dashboardRouter)
 app.use('/login', loginRouter)
 app.use('/add-nuddge', addNuddgeRouter)
+app.use('/complete-nuddge', completeNuddgeRouter)
 
 
 
@@ -64,6 +67,7 @@ app.post('/login', (req, res) => {
                 if (result) {
                     if (req.session) {
                         req.session.userId = user.id
+                        req.session.points = user.total_points
                         res.redirect('/dashboard')
                     }
                 } else {
