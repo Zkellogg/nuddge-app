@@ -24,7 +24,9 @@ router.get('/', (req, res) => {
         // console.log(nuddges[0].user)
         res.render('dashboard', {nuddges: nuddges, points: req.session.points})
     })
-}
+    
+} 
+    
 })
 
 module.exports = router
