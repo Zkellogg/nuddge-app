@@ -147,6 +147,6 @@ h1 {
     }
 }
 
-#errorMessage {
+.errorMessage {
     color: white;
 }
