@@ -8,7 +8,6 @@ Nuddge Goal Tracker App is here to help you track your progress and step out of 
 
 Nuddge is here to push you to create your dream life one nuddge at a time and become a better you!
 
-Site Preview: —insert screenshots here—
 
 How to use: Users are able to create an account and login in securely! After they login the user is able to create their Nuddges. 
 Each Nuddge has a category for the user to select from, an option to add a brief description, and a “boost date”. 
@@ -25,7 +24,7 @@ Features:
 - Points box: located in the upper corner where you can see your total points displayed
 - Filter: Filter to individual category or to completed to see how far you’ve come
 
-Site Preview:  — OR insert screenshots hereeee (whichever you think flows better)—
+Site Preview:  — ![Alt text](public/photos/test-nuddge-image.png "Title")
 
 Live Link: https://nuddge-app.herokuapp.com/
 
