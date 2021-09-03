@@ -146,3 +146,7 @@ h1 {
         margin-bottom: 11px;
     }
 }
+
+.errorMessage {
+    color: white;
+}

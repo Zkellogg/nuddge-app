@@ -27,7 +27,7 @@ Features:
 
 Site Preview:  — OR insert screenshots hereeee (whichever you think flows better)—
 
-Live Link: —URL here—
+Live Link: https://nuddge-app.herokuapp.com/
 
 Database: PostgresSQL
 
