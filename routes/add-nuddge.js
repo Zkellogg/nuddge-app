@@ -4,7 +4,9 @@ const router = express()
 
 const models = require('../models')
 const user = require('../models/user')
-const { Op } = require('sequelize')
+
+router.use(express.static(__dirname + '/public'));
+
 
 router.get('/', (req, res) => {
     if(req.session){
@@ -57,18 +59,8 @@ router.post('/', (req, res) => {
     })
 })
 
-router.get('/:category', (req, res) => {
-    const category = req.params.category
-    models.Nuddge.findAll({ 
-        where: {
-            category: {
-                [Op.iLike]: category
-            }
-        }
-    }).then(nuddges => {
-        res.render('dashboardTest', {nuddges: nuddges})
-    })
-})
+
+
 
 
 router.post('/update-status/:nuddgeId', (req,res) => {

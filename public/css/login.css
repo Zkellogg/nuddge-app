@@ -105,11 +105,15 @@ h1 {
 }
 
 @media only screen and (max-width: 600px) {
-    .nuddgeLogo {
-        background: url(../photos/logo_nuddge.png);
+    /* .nuddgeLogo {
+        background: url(../photos/final-logo.png);
         background-repeat: no-repeat;
-        width: 28vh;
-        height: 20vh;
+        width: 50%;
+        
+    } */
+
+    #logo{
+        width: 60%;
     }
     main h2 {
         font-family: Prompt;
